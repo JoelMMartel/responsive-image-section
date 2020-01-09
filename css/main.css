@@ -23,6 +23,7 @@ body {
 }
 
 section {
+  max-width: 50em;
   padding: 2em 1em;
   display: flex;
   flex-wrap: wrap;
@@ -30,19 +31,26 @@ section {
 
 .img-flex {
   display: block;
+  width: 100%;
 }
 
 .img-flex img {
   width: 100%;
 }
 
-.btn {
+a {
   background-color: #555;
   color: #e2e2e2;
   display: inline-block;
   padding: .5em .75em;
   border-radius: 4px;
   text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #000;
+  border: solid 3px;
+  border-color: #000;
 }
 
 .button {
@@ -61,14 +69,7 @@ p {
 
 @media only screen and (min-width: 25em) {
 
-  html {
-    font-size: 110%;
-    line-height: 1.4;
-  }
-
   section {
-    flex-direction: row;
-    max-width: 50em;
     align-items: center;
   }
 
@@ -76,8 +77,55 @@ p {
     padding-right: 2em;
   }
 
-  .img-flex {
+}
 
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  section {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .text {
+    flex-basis: 55%;
+  }
+
+  .img-flex {
+    flex-basis: 45%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  section {
+    padding-top: 2em;
+  }
+
+  .text {
+    flex-basis: 50%;
+  }
+
+  .img-flex {
+    flex-basis: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
   }
 
 }
